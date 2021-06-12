@@ -14,14 +14,18 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
       console.log('user disconnected');
     });
+    socket.on('chat message', (msg) => {
+        console.log('message: ' + msg);
+        io.emit('chat message', msg);
+      });
   });
 
-  io.on('connection', (socket) => {
+/*  io.on('connection', (socket) => {
     socket.on('chat message', (msg) => {
       console.log('message: ' + msg);
     });
   });
-
+*/
  // io.emit('some event', { someProperty: 'some value', otherProperty: 'other value' }); // This will emit the event to all connected sockets
 
   server.listen(3000, () => {
