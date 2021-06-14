@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <!--<a href="/display">Display</a> -->
+        <h1>Edit Record</h1>
+        <form method="post">
+            Name: <input type="text" name="txt1" value="<%= db_rows_array[0].name %> "  required>
+            Physics: <input type="int" name="txt2"  value="<%= db_rows_array[0].physics %> " required>
+            Chemistry: <input type="int" name="txt3"  value="<%= db_rows_array[0].chemistry %> " required>
+            Maths: <input type="int" name="txt4"  value="<%= db_rows_array[0].maths %> " required>
+            Biology: <input type="int" name="txt5"  value="<%= db_rows_array[0].biology %> " required>
+            <input type="submit">
+        </form>
+    </body>
+</html>
